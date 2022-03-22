@@ -62,19 +62,15 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        // $category = Category::with(['categories', 'category'])->get();
+      
 
         return view('admin.categories.show', compact('category'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  Category  $category
-     * @return \Illuminate\Http\Response
-     */
+   
     public function edit(Category $category)
     {
+        
         $categories = Category::all();
 
         return view('admin.categories.edit', compact('category', 'categories'));
